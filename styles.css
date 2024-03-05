@@ -1,0 +1,115 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  /* } */
+
+body,html{
+    margin: 0;
+    padding: 0;
+    background-color: #FFF;
+}
+body{
+    font-family: "Source Sans 3", sans-serif;
+
+}
+a {
+    text-decoration: none;
+} 
+.top-section{
+    color: #FFF;
+    padding-top: 139px;
+    padding-bottom: 139px;
+    max-width: 1066px;
+    margin: 0 auto;/*上下 左右*/
+    position: relative;/*給圓形參照定位*/
+}
+.top-section-wrapper{/*背景顏色*/
+    overflow: hidden;/*圓形不會超出(阻止X軸)*/
+    background-color: #001D37;
+    padding: 0 1rem; /*給小螢幕*/
+
+}
+.top-section h1{
+    z-index: 5;/*文字在圓形上*/
+    position: relative;
+
+    font-size: 6.25rem;
+    margin: 0;
+    line-height: 97.3%;
+    max-width: 525px;
+}
+.intro-text{
+    font-size: 1.25rem;
+    line-height: 169.3%;
+    margin: 1rem 0;
+    max-width: 435px;
+}
+.intro-buttons{
+    margin-bottom: 129px;
+}
+.our-btn{
+    display: inline-block;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: #475AFF;
+    border: solid 2px #475AFF;/*加框跟隔壁按鈕齊高*/
+    color:#FFF;
+    padding: 14px 40px;
+    border-radius: 1000px;
+}
+.our-btn--outline{
+    background-color: transparent;
+    border: 2px solid #FFF;
+}
+
+.utility-mr{
+    margin-right: 10px;
+}
+
+.intro-features{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;/*四等份*/
+    column-gap: 16px/*每等份間距*/
+}
+.intro-feature{
+    border:1px solid rgba(255,255,255,0.24);/*三個值最大化是白色,最後是透明度*/
+    padding: 33px 25px;
+}
+
+.intro-feature {
+    margin: 0;
+    font-size: 1.0625rem;
+}
+.intro-feature h2{
+    font-size: 1.5rem;
+    margin:31px 0 3px 0;
+}
+.circle{
+    width: 617px;
+    height: 617px;
+    background: #D660FF;
+    opacity: 0.85;
+    border-radius: 50%;
+    filter:blur(150px);/*圓的模糊程度*/
+    position: absolute;
+    top: 62px;
+    right: -390px;
+    /*若單用絕對定位，會依父層寬度定位*/
+    /*圓以top-section為定，但圓往右出框所以負值*/
+}
+.circle-two{
+    width: 617px;
+    height: 617px;
+    background: #6079FF;
+    opacity: 0.85;
+    border-radius: 50%;
+    filter:blur(150px);/*圓的模糊程度*/
+    position: absolute;
+    top: -365px;
+    left: -123px;
+    /*圓的位置：基準是top-section的範圍*/
+    /*top:在設計稿，圓的最高點-設計稿邊界的高度*/
+    /*left:以top-section來說，圓往左邊跑，
+    所以量top-section左邊框-圓的左頂點*/
+}
