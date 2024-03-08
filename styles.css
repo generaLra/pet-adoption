@@ -15,6 +15,11 @@ body{
 }
 a {
     text-decoration: none;
+}
+.top-section-wrapper{/*背景顏色*/
+    overflow: hidden;/*圓形不會超出(阻止X軸)*/
+    background-color: #001D37;
+    padding: 0 1rem; /*給小螢幕*/
 } 
 .top-section{
     color: #FFF;
@@ -24,18 +29,14 @@ a {
     margin: 0 auto;/*上下 左右*/
     position: relative;/*給圓形參照定位*/
 }
-.top-section-wrapper{/*背景顏色*/
-    overflow: hidden;/*圓形不會超出(阻止X軸)*/
-    background-color: #001D37;
-    padding: 0 1rem; /*給小螢幕*/
+.actual-top-content{
+    z-index: 2;/*讓文字在圓形上面*/
+    position: relative;
 
 }
 .top-section h1{
-    z-index: 5;/*文字在圓形上*/
-    position: relative;
-
     font-size: 6.25rem;
-    margin: 0;
+    margin: 0;/*移除標籤的預設邊距*/
     line-height: 97.3%;
     max-width: 525px;
 }
@@ -112,4 +113,35 @@ a {
     /*top:在設計稿，圓的最高點-設計稿邊界的高度*/
     /*left:以top-section來說，圓往左邊跑，
     所以量top-section左邊框-圓的左頂點*/
+}
+
+/**/
+.page-section{
+    background-color: #FFF;
+    padding: 130px 16px;/*16px給小螢幕的左右間距*/
+}
+.page-section-inner{
+    max-width:1066px;
+    margin: 0 auto;
+}
+.page-section-title{
+    font-size: 5.31rem;
+    margin: 0;/*移除標籤的預設邊距*/
+    line-height: 1;
+}
+.pet-filter,.pet-filter button{
+    color:#9F9F9F;
+    font-size: 1.375rem;
+}
+.pet-filter button{
+    background-color: transparent;
+    border:none;
+    font-family: "Source Sans 3", sans-serif;
+}
+.site-footer p{
+    text-align: center;
+    color:#a6a6a6;
+    font-size: 0.875rem;
+    margin: 0;
+    padding: 0 0 30px 0;/* 上 右 下 左 */
 }
